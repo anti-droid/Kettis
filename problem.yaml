@@ -2,11 +2,10 @@ problem_format_version: 2025-09
 uuid: 68d77624-1cce-47c2-88b6-713a2e010ee5
 
 credits:
-  authors: Anton Vadsholt <avad@itu.dk>
-  contributors:
-  - Authy McAuth <authy@mcauth.example>
-  - Additional Contributor <extra@contrib.example>
-
+  authors: 
+  - Anton Vadsholt <avad@itu.dk>
+  - Matthias Schoenning Nielsen <mscn@itu.dk>
+  - Kristoffer Mejborn Eliasson <krme@itu.dk>
 
 type: pass-fail
 name:
