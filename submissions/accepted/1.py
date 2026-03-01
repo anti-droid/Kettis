@@ -15,9 +15,3 @@ for d in drinks:
     else:
         break
 print(total)
-
-
-
-# IDEAS:
-# - 0 drinks
-# - Integer overflow
