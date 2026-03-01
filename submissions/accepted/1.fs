@@ -1,3 +1,4 @@
+// Language: F#
 module thing
 
 let l = int64(System.Console.ReadLine())
@@ -14,5 +15,5 @@ let rec findDrinkCount l ds m acc =
     | d::ds when d+m > l -> acc
     | d::ds -> findDrinkCount l ds (m+d) (acc+1)
 
-let lines = List.sort (readlines n [])
+let lines = (readlines n []) |> List.sort 
 printfn "%d" (findDrinkCount l lines 0L 0)
