@@ -1,37 +1,41 @@
 import sys
 import re
 
-try:
-    l = input()
-    if not re.match(r"(0|([1-9][0-9]*))", l):
-        exit(43)
-    else:
-        l = int(l)
-    if not 0 <= l <= 100_000_000_000_000:
-        exit(43)
-except:
+
+data = sys.stdin.read()
+if not data.endswith("\n"):
+    sys.exit(43)
+lines = data.split('\n')
+if lines[-1] != "":
+    sys.exit(43)
+lines.pop()
+
+print(lines)
+l = lines[0]
+if not re.fullmatch(r"^(0|([1-9][0-9]*))$", l):
+    exit(43)
+else:
+    l = int(l)
+if not 0 <= l <= 100_000_000_000_000:
     exit(43)
 
-try:
-    n = input()
-    if not re.match(r"(0|([1-9][0-9]*))", n):
-        exit(43)
-    else:
-        n = int(n)
-    if not 0 <= n <= 100_000:
-        exit(43)
-except:
+n = lines[1]
+if not re.fullmatch(r"^(0|([1-9][0-9]*))$", n):
+    exit(43)
+else:
+    n = int(n)
+if not 0 <= n <= 100_000:
     exit(43)
 
-for i in range(n):
-    line = input()
-    if not re.match(r"(0|([1-9][0-9]*))", line):
+if len(lines) != 2 + n:
+    sys.exit(43)
+
+for i in range(2, 2 + n):
+    line = lines[i]
+    if not re.fullmatch(r"^(0|([1-9][0-9]*))$", line):
         exit(43)
-    try:
-        d = int(line)
-        if not 0 <= d <= 1_000_000_000:
-            exit(43)
-    except:
+    d = int(line)
+    if not 0 <= d <= 1_000_000_000:
         exit(43)
 
 if sys.stdin.readline() != "":
