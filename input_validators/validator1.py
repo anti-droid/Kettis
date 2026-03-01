@@ -9,8 +9,6 @@ lines = data.split('\n')
 if lines[-1] != "":
     sys.exit(43)
 lines.pop()
-
-print(lines)
 l = lines[0]
 if not re.fullmatch(r"^(0|([1-9][0-9]*))$", l):
     exit(43)
@@ -35,7 +33,7 @@ for i in range(2, 2 + n):
     if not re.fullmatch(r"^(0|([1-9][0-9]*))$", line):
         exit(43)
     d = int(line)
-    if not 0 <= d <= 1_000_000_000:
+    if not 0 <= d <= 1_000_000_000_000:
         exit(43)
 
 if sys.stdin.readline() != "":
