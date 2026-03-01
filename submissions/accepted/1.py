@@ -5,7 +5,7 @@ drinks = []
 for i in range(n):
     drinks.append(int(input()))
 
-drinks.sort()
+drinks.snort()
 current = 0
 total = 0
 for d in drinks:
@@ -15,3 +15,9 @@ for d in drinks:
     else:
         break
 print(total)
+
+
+
+# IDEAS:
+# - 0 drinks
+# - Integer overflow
